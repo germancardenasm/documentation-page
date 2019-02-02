@@ -1,5 +1,129 @@
-$body-color: blue;
+@import 'reset';
 
 body {
-  color: $body-color;
+  color: black;
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 3em 1.5em;
+  min-width: 380px;
+}
+
+#main-doc{
+  padding: 0 0 0 1em;
+  margin-top: 1em;
+}
+
+h1{
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 2em;
+}
+
+section {
+  margin-left: 1em;
+}
+
+section h2{
+  margin-left: -1em;
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+}
+
+code{
+  font-family: monospace;
+  background-color: rgb(201, 201, 201);
+  display: inline-block;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+nav{
+  font-family: Trirong, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid gray;
+    ul {
+    background-color: rgb(228, 240, 255);
+    padding: 0.5em 1em;
+    font-size: 1.25em;
+    list-style: none;
+      li{
+        display: inline;
+        padding-right: 10px;
+        a{
+          color: black;
+        }
+    }
+  }
+}
+
+nav ul li a:hover{
+  text-decoration: none;
+}
+
+.nav-link{
+  display: none;
+}
+
+#nav-min{
+  float: left;
+  width: 3em;
+  height: 100%;
+  text-align: center;
+  line-height: 3em;
+}
+
+#nav-min:hover{
+  background-color: gray;
+}
+
+.inline{
+  display: inline-block;
+}
+
+@media (min-width:550px){
+  #menu-icon{
+    display: none;
+  }
+  .nav-link{
+    display: inline-block;
+  }
+
+}
+@media (min-width: 895px){
+
+  #container{
+    flex-direction: row;
+  }
+
+  #main-doc{
+    padding: 0 0 0 2em;
+    margin-left: 300px;
+    border-left: 1px solid gray;
+    border-top: none;
+  }
+  
+  nav{
+    flex-basis: 100em;
+    
+    ul {
+      background: none; 
+      li{
+      display: block;
+      }
+    } 
+  }
+
+  #menu-icon{
+    display: none;
+  }
+  .nav-link{
+    display: block;
+  }
+
+  .stick{
+    position: fixed;
+    width: 290px;
+    height: 100%;
+  }
+
 }
