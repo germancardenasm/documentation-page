@@ -15,6 +15,15 @@ body {
 h1{
   font-family: 'Proza Libre', sans-serif;
   font-size: 2em;
+  text-align: center;
+}
+
+p{
+  font-size: 0.8em;
+}
+
+ol{
+  font-size: 0.7;
 }
 
 section {
@@ -28,14 +37,6 @@ section h2{
 #container{
   display: flex;
   flex-direction: column;
-}
-
-code{
-  font-family: monospace;
-  background-color: rgb(201, 201, 201);
-  display: inline-block;
-  padding: 1em;
-  margin-bottom: 1em;
 }
 
 nav{
@@ -64,36 +65,67 @@ nav ul li a:hover{
   display: none;
 }
 
-#nav-min{
-  float: left;
+.menu-icon{
   width: 3em;
   height: 100%;
   text-align: center;
   line-height: 3em;
 }
 
-#nav-min:hover{
+#openMenu-icon{
+  float: left;
+}
+
+.menu-icon:hover{
   background-color: gray;
+} 
+
+#closeMenu-icon{
+  float: right;
+
 }
 
 .inline{
   display: inline-block;
 }
 
+.visible{
+  display: block;
+}
+
+.invisible{
+  display: none;
+}
+
+code{
+  font-family: monospace;
+  background-color: rgb(201, 201, 201);
+  display: inline-block;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
 @media (min-width:550px){
-  #menu-icon{
+
+  .menu-icon{
     display: none;
   }
   .nav-link{
     display: inline-block;
   }
 
+  h1{
+    text-align: left;
+  }
 }
-@media (min-width: 895px){
+
+
+@media (min-width: 950px){
 
   #container{
     flex-direction: row;
   }
+
 
   #main-doc{
     padding: 0 0 0 2em;
@@ -113,7 +145,7 @@ nav ul li a:hover{
     } 
   }
 
-  #menu-icon{
+  .menu-icon{
     display: none;
   }
   .nav-link{
