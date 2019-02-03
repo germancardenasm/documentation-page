@@ -23,7 +23,7 @@ p{
 }
 
 ol{
-  font-size: 0.7;
+  font-size: 0.6;
 }
 
 section {
@@ -45,7 +45,7 @@ nav{
     ul {
     background-color: rgb(228, 240, 255);
     padding: 0.5em 1em;
-    font-size: 1.25em;
+    font-size: 1.2em;
     list-style: none;
       li{
         display: inline;
@@ -98,14 +98,17 @@ nav ul li a:hover{
 }
 
 code{
+  display: block;
+  white-space: pre-wrap;   
   font-family: monospace;
+  font-size: 1em;
   background-color: rgb(201, 201, 201);
-  display: inline-block;
   padding: 1em;
   margin-bottom: 1em;
 }
 
-@media (min-width:550px){
+
+@media (min-width:870px){
 
   .menu-icon{
     display: none;
@@ -113,19 +116,20 @@ code{
   .nav-link{
     display: inline-block;
   }
-
+  nav ul{
+    font-size: 1em;
+  }
   h1{
     text-align: left;
   }
 }
 
 
-@media (min-width: 950px){
+@media (min-width: 990px){
 
   #container{
     flex-direction: row;
   }
-
 
   #main-doc{
     padding: 0 0 0 2em;
@@ -135,12 +139,13 @@ code{
   }
   
   nav{
-    flex-basis: 100em;
-    
+    flex-basis: 120em;
     ul {
       background: none; 
       li{
       display: block;
+      margin-bottom: 1em;
+      border-bottom: 1px solid gray;
       }
     } 
   }
